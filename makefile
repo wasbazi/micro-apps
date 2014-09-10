@@ -1,6 +1,9 @@
 PORT?=8000
 
-server:
+build:
+	@echo "no build step currently"
+
+angular:
 	@python -m SimpleHTTPServer $(PORT)
 
 .PHONY: server
