@@ -2,21 +2,23 @@
 <html ng-app="app">
   <head>
     <script src="/javascript/angular.js"></script>
-    <script src="http://code.angularjs.org/1.2.1/angular-route.min.js"></script>
+    <script src="/javascript/angular-ui-router.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="/javascript/hello-script.js"></script>
     <script src="/javascript/script.js"></script>
     <link rel="stylesheet" href="/css/style.css">
   </head>
   <body>
     <ul>
       <li>Navigation</li>
-      <li><a href="#/">Home</a></li>
-      <li><a href="#/hello">Hello</a></li>
-      <li><a href="#/world">World</a></li>
+      <li><a ui-sref="home">Home</a></li>
+      <li><a ui-sref="hello">Hello</a></li>
+      <li><a ui-sref="world">World</a></li>
     </ul>
     <div id="wrapper">
       <h1>Welcome to my sample micro-applications app.</h1>
       <div ng-controller="AppController">
-        <div ng-view></div>
+        <div ui-view></div>
       </div>
     </div>
   </body>

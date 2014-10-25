@@ -1,17 +1,22 @@
-angular.module('app', ['ngRoute'])
+angular.module('app', ['ui.router', 'helloApp'])
   .controller('AppController', function(){
+    console.log('in AppController')
   })
-  .config(function($routeProvider){
-    $routeProvider
-      .when('/', {
-        templateUrl: 'apps/home.html'
+  .config(function($stateProvider, $urlRouterProvider){
+    $urlRouterProvider.otherwise("/");
+    //
+    // Now set up the states
+    $stateProvider
+      .state('home', {
+        url: "/",
+        templateUrl: "apps/home.html"
       })
-      .when('/hello', {
-        templateUrl: 'apps/hello.html',
-        controller: ''
+      .state('hello', {
+        url: "/hello",
+        templateUrl: "apps/hello.html"
       })
-      .when('/world', {
-        templateUrl: 'apps/world.html',
-        controller: ''
+      .state('world', {
+        url: "/world",
+        templateUrl: "apps/world.html"
       })
-  })
+    });
