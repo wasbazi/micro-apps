@@ -10,15 +10,15 @@ require(['./hello-script'], function(){
       $stateProvider
         .state('home', {
           url: "/",
-          templateUrl: "apps/home.html"
+          templateUrl: "partials/home.html"
         })
         .state('hello', {
           url: "/hello",
-          templateUrl: "apps/hello.html"
+          templateUrl: "partials/hello.html"
         })
         .state('world', {
           url: "/world",
-          templateUrl: "apps/world.html"
+          templateUrl: "partials/world.html"
         })
       });
 

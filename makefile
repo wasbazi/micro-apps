@@ -4,6 +4,6 @@ build:
 	@echo "no build step currently"
 
 angular:
-	@python -m SimpleHTTPServer $(PORT)
+	@(cd angular-require && python -m SimpleHTTPServer $(PORT))
 
 .PHONY: server
