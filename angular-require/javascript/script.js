@@ -5,8 +5,7 @@ require(['./hello-script'], function(){
     })
     .config(function($stateProvider, $urlRouterProvider){
       $urlRouterProvider.otherwise("/");
-      //
-      // Now set up the states
+
       $stateProvider
         .state('home', {
           url: "/",

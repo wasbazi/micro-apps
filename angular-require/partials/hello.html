@@ -1,6 +1,11 @@
 <div id="hello-app">
   <h5>HELLO!</h5>
   <div ng-controller="HelloAppController">
-    {{ variable }}
+    <div>{{ variable }}</div>
+    <br />
+    <h3> Sub Navigation </h3>
+    <div><a ui-sref="hello.state1">State 1</a></div>
+    <div><a ui-sref="hello.state2">State 2</a></div>
+    <div ui-view="hello"></div>
   </div>
 </div>
